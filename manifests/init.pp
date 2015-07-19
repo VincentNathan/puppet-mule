@@ -40,13 +40,14 @@ class mule(
 
   $basedir = "${mule_install_dir}/mule"
   $dist = "mule-standalone-${mule_version}"
-  $archive = "${dist}.tar.gz"
+  $archive = "${dist}.zip"
 
   archive { $dist:
     ensure           => present,
     url              => "${mule_mirror}/${archive}",
     target           => $mule_install_dir,
     checksum         => false,
+    extension        => zip,
     timeout          => 0
   }
 
