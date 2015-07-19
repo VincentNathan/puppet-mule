@@ -47,9 +47,7 @@ class mule(
     url              => "${mule_mirror}/${archive}",
     target           => $mule_install_dir,
     checksum         => false,
-    timeout          => 0,
-    extension        => 'tar.gz',
-    strip_components => 1
+    timeout          => 0
   }
 
   file { $basedir:
