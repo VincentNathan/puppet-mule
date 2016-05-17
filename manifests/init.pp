@@ -61,7 +61,7 @@ class mule(
                         "${basedir}/domains",
                         "${basedir}/logs",
                         "${basedir}/apps",
-                        "${mule_install_dir}/${dist}", ]
+                        "${mule_install_dir}/mule-enterprise-standalone-3.7.3", ]
 
   file { $user_owned_dirs:
     ensure  => directory,
