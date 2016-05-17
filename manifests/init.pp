@@ -48,7 +48,7 @@ class mule(
     target           => $mule_install_dir,
     checksum         => false,
     timeout          => 0,
-    strip_components => 1
+    strip_components => 0
   }
 
   file { $basedir:
