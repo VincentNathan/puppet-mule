@@ -31,16 +31,16 @@
 # }
 #
 class mule(
-  $mule_mirror = 'https://repository.mulesoft.org/nexus/content/repositories/releases/org/mule/distributions/mule-standalone/',
-  $mule_version = '3.7.0',
+  $mule_mirror = 'https://s3-us-west-2.amazonaws.com/cu-ee/',
+  $mule_version = '3.7.3',
   $mule_install_dir = '/opt',
   $java_home = '/usr/lib/jvm/jre-1.7.0-oracle.x86_64-1.7.0.85',
   $user = 'root',
   $group = 'root') {
 
   $basedir = "${mule_install_dir}/mule"
-  $dist = "mule-standalone-${mule_version}"
-  $archive = "${mule_mirror}/${mule_version}/${dist}.tar.gz"
+  $dist = "mule-ee-distribution-standalone-${mule_version}"
+  $archive = "${mule_mirror}/${dist}.tar.gz"
 
   archive { $dist:
     ensure           => present,
