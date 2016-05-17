@@ -34,7 +34,7 @@ class mule(
   $mule_mirror = 'https://repository.mulesoft.org/nexus/content/repositories/releases/org/mule/distributions/mule-standalone/',
   $mule_version = '3.7.0',
   $mule_install_dir = '/opt',
-  $java_home = '/usr/lib/jvm/default-java',
+  $java_home = '/usr/lib/jvm/jre-1.7.0-oracle.x86_64-1.7.0.85',
   $user = 'root',
   $group = 'root') {
 
