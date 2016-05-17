@@ -53,7 +53,7 @@ class mule(
 
   file { $basedir:
     ensure  => 'link',
-    target  => "${mule_install_dir}/${dist}",
+    target  => "${mule_install_dir}/mule-enterprise-standalone-3.7.3",
     require => Archive[$dist]
   }
 
