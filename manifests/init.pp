@@ -49,6 +49,7 @@ class mule(
     checksum         => false,
     timeout          => 0,
     strip_components => 0
+    root_dir         => '.',
   }
 
   file { $basedir:
