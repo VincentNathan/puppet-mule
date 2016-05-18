@@ -31,7 +31,7 @@
 # }
 #
 class mule(
-  $mule_mirror = 'https://s3-us-west-2.amazonaws.com/cu-ee/',
+  $mule_mirror = 'https://s3-us-west-2.amazonaws.com/cu-ee',
   $mule_version = '3.7.3',
   $mule_install_dir = '/opt',
   $java_home = '/usr/lib/jvm/jre-1.7.0-oracle.x86_64-1.7.0.85',
