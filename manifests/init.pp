@@ -50,6 +50,7 @@ class mule(
     timeout          => 0,
     strip_components => 0,
     root_dir         => '.',
+    tar_command      => 'tar',
   }
 
   file { $basedir:
