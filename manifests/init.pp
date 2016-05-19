@@ -45,10 +45,10 @@ class mule(
   archive { $dist:
     ensure           => present,
     url              => $archive,
-    target           => "${mule_install_dir}/${dist}",
+    target           => ${mule_install_dir},
     checksum         => false,
     timeout          => 0,
-    strip_components => 1,
+#    strip_components => 1,
 #    root_dir         => '.',
     tar_command      => 'tar',
     follow_redirects => true,
