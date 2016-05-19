@@ -45,7 +45,7 @@ class mule(
   archive { $dist:
     ensure           => present,
     url              => $archive,
-    target           => $mule_install_dir,
+    target           => ${mule_install_dir}/${dist},
     checksum         => false,
     timeout          => 0,
     strip_components => 1,
