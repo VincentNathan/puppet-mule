@@ -39,7 +39,7 @@ class mule(
   $group = 'root') {
 
   $basedir = "${mule_install_dir}/mule"
-  $dist = "mule-ee-distribution-standalone-${mule_version}"
+  $dist = "mule-enterprise-standalone-${mule_version}"
   $archive = "${mule_mirror}/${dist}.tar.gz"
 
   archive { $dist:
