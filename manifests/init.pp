@@ -48,14 +48,14 @@ class mule(
     target           => $mule_install_dir,
     checksum         => false,
     timeout          => 0,
-    strip_components => 0,
+    strip_components => 1,
 #    root_dir         => '.',
     tar_command      => 'tar',
   }
 
   file { $basedir:
     ensure  => 'link',
-    target  => "${mule_install_dir}/mule-enterprise-standalone-3.7.3",
+    target  => "${mule_install_dir}/${dist}",
     require => Archive[$dist]
   }
 
@@ -63,7 +63,7 @@ class mule(
                         "${basedir}/domains",
                         "${basedir}/logs",
                         "${basedir}/apps",
-                        "${mule_install_dir}/mule-enterprise-standalone-3.7.3", ]
+                        "${mule_install_dir}/${dist}", ]
 
   file { $user_owned_dirs:
     ensure  => directory,
