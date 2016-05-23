@@ -51,6 +51,7 @@ class mule(
 #    strip_components => 1,
 #    tar_command      => 'tar',
 #    follow_redirects => true,
+
   }
 
   file { $basedir:
